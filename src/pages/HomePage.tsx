@@ -259,7 +259,10 @@ export function HomePage() {
               transition={{ duration: 0.35 }}
               className="lg:col-span-5"
             >
-              <ProfilePortrait variant="about" />
+              <ProfilePortrait
+                variant="about"
+                imageSrc={PORTFOLIO_PROFILE.aboutPortraitPath}
+              />
             </motion.div>
 
             <motion.div

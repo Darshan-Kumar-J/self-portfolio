@@ -6,6 +6,7 @@ import { PORTFOLIO_PROFILE } from '../data/portfolio';
 interface ProfilePortraitProps {
   variant: 'hero' | 'about';
   priority?: boolean;
+  imageSrc?: string;
 }
 
 type HeroLens = 'portrait' | 'backend' | 'security';
@@ -32,7 +33,11 @@ return timingSafeEqual(Buffer.from(expected), Buffer.from(sig));`,
   },
 };
 
-export function ProfilePortrait({ variant, priority = false }: ProfilePortraitProps) {
+export function ProfilePortrait({
+  variant,
+  priority = false,
+  imageSrc = PORTFOLIO_PROFILE.portraitPath,
+}: ProfilePortraitProps) {
   const [imageUnavailable, setImageUnavailable] = useState(false);
   const [heroLens, setHeroLens] = useState<HeroLens>('portrait');
   const shouldReduceMotion = useReducedMotion();
@@ -147,7 +152,7 @@ export function ProfilePortrait({ variant, priority = false }: ProfilePortraitPr
         >
           {!imageUnavailable ? (
             <img
-              src={PORTFOLIO_PROFILE.portraitPath}
+              src={imageSrc}
               alt={PORTFOLIO_PROFILE.portraitAlt}
               width={480}
               height={550}
@@ -159,7 +164,7 @@ export function ProfilePortrait({ variant, priority = false }: ProfilePortraitPr
               className={`h-full w-full object-cover transition-transform duration-500 ${
                 isHero
                   ? 'object-[50%_12%] group-hover:scale-[1.02]'
-                  : 'object-[50%_8%] group-hover:scale-[1.03]'
+                  : 'object-[50%_18%] group-hover:scale-[1.03]'
               }`}
             />
           ) : (

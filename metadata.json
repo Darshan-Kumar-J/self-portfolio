@@ -2,5 +2,7 @@
   "name": "Darshan Kumar J — Python Full-Stack Developer",
   "description": "Engineering portfolio and technical case-study library of Darshan Kumar J, Python Full-Stack Developer in Bengaluru.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }
